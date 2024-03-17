@@ -13,7 +13,7 @@ class Child extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <h1>Child Component</h1>
         <ul>
           <li>This is Child Component.</li>
@@ -22,7 +22,7 @@ class Child extends Component {
           <li>Props can be accessed by this.props</li>
           <input type="text" value={this.props.propsVal} onChange={this.handleChange} />
         </ul>
-      </React.Fragment>
+      </>
     )
   }
 }

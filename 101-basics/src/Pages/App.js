@@ -1,44 +1,36 @@
-import React, { Component } from 'react'
-import Navbar from '../compoents/Navbar'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-// import { Switch, Route } from 'react-router-dom'
+import React from "react"
+import Navbar from "../components/Navbar"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import StateAndProps from "./StateAndProps"
+import FirstComponent from "./FirstComponent"
+import RouterDemo from "./RouterDemo"
+import Lifecycle from "./Lifecycle"
+import ThrowError from "../components/ThrowError"
+import UnmountAll from "./UnmountAll"
+import Page404 from "./Page404"
+import FormDemo from "./FormDemo"
+import ErrorHandler from "./ErrorHandler"
 
-import Lifecycle from '../Pages/Lifecycle'
-import StateAndProps from '../Pages/StateAndProps'
-import RouterDemo from '../Pages/RouterDemo'
-import FirstComponent from '../Pages/FirstComponent'
-import ErrorHandler from '../Pages/ErrorHandler'
-import FormDemo from '../Pages/FormDemo'
-import Page404 from '../Pages/Page404'
-import ThrowError from '../compoents/ThrowError'
-import UnmountAll from './UnmountAll'
-
-class App extends Component {
+class App extends React.Component {
   render() {
-    return (
-      <>
-        <Router>
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={FirstComponent} />
-            <Route path="/state-and-props" component={StateAndProps} />
-            <Route path="/router-demo" component={RouterDemo} />
-            <Route exact path="/lifecycle">
-              <Lifecycle paramAsProp="This value is passed from Route!" />
-            </Route>
-            <Route path="/lifecycle/:id" component={Lifecycle} />
-            <Route path="/react-form" component={FormDemo} />
-            <Route path="/error-handler">
-              <ErrorHandler>
-                <ThrowError />
-              </ErrorHandler>
-            </Route>
-            <Route path="/delete" component={UnmountAll} />
-            <Route path="*" component={Page404} />
-          </Switch>
-        </Router>
-      </>
-    )
+    return (<>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<FirstComponent />} />
+          <Route path="/state-and-props" element={<StateAndProps />} />
+          <Route path="/router-demo" element={<RouterDemo />} />
+          <Route exact path="/lifecycle" element={<Lifecycle paramAsProp="This value is passed from Route!" />} />
+          <Route path="/lifecycle/:id" element={<Lifecycle />} />
+          <Route path="/react-form" element={<FormDemo />} />
+          <Route path="/error-handler" element={<ErrorHandler>
+            <ThrowError />
+          </ErrorHandler>} />
+          <Route path="/delete" element={<UnmountAll />} />
+          <Route path="*" element={<Page404 />} />
+        </Routes>
+      </Router>
+    </>)
   }
 }
 

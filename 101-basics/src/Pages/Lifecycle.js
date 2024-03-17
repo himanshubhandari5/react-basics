@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router'
+// import { withRouter } from 'react-router'
 
 class Lifecycle extends Component {
   constructorCount = 1;
@@ -33,11 +33,13 @@ class Lifecycle extends Component {
       <>
         <h1>Lifecycle</h1>
         <p>Current State: <strong>{this.state.lifecycle1}</strong> and <strong>{this.state.lifecycle2}</strong></p>
-        <p>Dynamically fetched ID is: {this.props.match.params.id}</p>
+        <p>"this.props.match.params.id" is not supported in react-router-dom v6</p>
+        {/* <p>Dynamically fetched ID is: {this.props.match.params.id}</p> */}
         <p>Param added during Component: <strong>{this.props.paramAsProp}</strong></p>
       </>
     )
   }
 }
 
-export default withRouter(Lifecycle)
+// export default withRouter(Lifecycle)
+export default Lifecycle

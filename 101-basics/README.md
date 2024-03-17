@@ -1,23 +1,18 @@
-# Introduction
+# Basics of React App
 
-- This project is bootstrapped with create-react-app
-- I have tried to add all the basic concepts of react into it
-- No CSS is added to the project, to keep it extreme simple
+## [Installing react without create-react-app](https://youtu.be/mB1TKceLzh0)
 
-## Code Structure
-
-- All source code is inside src folder and index.js is the entry point
-- index.js includes App component, which in turn includes Navbar component
-- index > App > Navbar
-
-### Directories
-
-#### Pages
-
-- This folder supposed to contain all the pages, the component with which the pages will be build are inside components folder
-- FirstComponent.js is the first component which will be rendered on the Home page
-- StateAndProps.js file contains all the logic to handle State and Props
-
-#### components
-
--
+- npm init -y
+- npm i -D webpack webpack-cli webpack-dev-server
+- npm i react react-dom
+- npm i -D @babel/cli @babel/core @babel/plugin-transform-runtime @babel/preset-env @babel/preset-react @babel/runtime babel-eslint babel-loader
+- create a file named: .babelrc
+- create a file named: webpack.config.js
+- Add start and build scripts in package.json
+- Create src and public directories
+- Create index.html in public directory
+- Create index.js as entry point to the React Application
+- Now we can continue our react application..
+- To fix the issue of 'Cannot Get/URL on Refresh' followed this guide: https://youtu.be/EDJW88iVORA
+  - Added historyApiFallback: true in webpack.config.js
+  - Added publicPath: "/" in webpack.config.js

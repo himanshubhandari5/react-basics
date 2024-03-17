@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Child from '../compoents/Child'
-import ChildTags from '../compoents/ChildTags'
+import Child from '../components/Child'
+import ChildTags from '../components/ChildTags'
 
 class StateAndProps extends Component {
 
@@ -12,6 +12,7 @@ class StateAndProps extends Component {
   }
 
   onKey1Change(evt) {
+    // This way it won't allow to update the value of key1
     this.setState({ "key": evt.target.value })
   }
 
@@ -32,7 +33,7 @@ class StateAndProps extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <h1>Parent Component</h1>
         <ul>
           <li>Class based component</li>
@@ -56,7 +57,7 @@ class StateAndProps extends Component {
               </li>
             </ul>
           </li>
-          <li>JSX required to have one parent div to hold all the subsequent childs or tags, using React.Fragment, that unnecessary div element can be avoided</li>
+          <li>JSX required to have one parent div to hold all the subsequent childs or tags, using , that unnecessary div element can be avoided</li>
         </ul>
         <hr />
 
@@ -68,7 +69,7 @@ class StateAndProps extends Component {
             <li>This is children tags, which are passed along Child component</li>
           </ul>
         </ChildTags>
-      </React.Fragment>
+      </>
     )
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
 class UnmountAll extends Component {
@@ -9,7 +9,7 @@ class UnmountAll extends Component {
   }
 
   render() {
-    return <h1> I am about to delete everything.... !!!!!!!</h1>
+    return <h1> I am about to delete everything.... i.e. UNMOUNTING ALL THE COMPONENTS!!</h1>
   }
 }
 

@@ -1,4 +1,4 @@
-import { Component } from "react"
+import React, { Component } from "react"
 
 class ThrowError extends Component {
   cnt = 0
@@ -9,7 +9,7 @@ class ThrowError extends Component {
   }
 
   increaseCount() {
-    this.setState({ count: this.state.count + 1 })
+    this.setState({ ...this.state, count: this.state.count + 1 })
     this.cnt = this.cnt + 1
     if (this.state.count > 3) {
       console.log("Error thrown")

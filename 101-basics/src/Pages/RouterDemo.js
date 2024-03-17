@@ -10,8 +10,9 @@ class RouterDemo extends Component {
     return (
       <>
         <h1>Router</h1>
-        <button onClick={this.handleBack}>Back</button>
-        <p>Current Page Location: {this.props.location.pathname}</p>
+        <p>"this.props.location.pathname" is not working in react-router-dom v6</p>
+        {/* <button onClick={this.handleBack}>Back</button>
+        <p>Current Page Location: {this.props.location.pathname}</p> */}
         <Link to="/">Home</Link>
       </>
     )
