@@ -1,22 +1,18 @@
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 
-const useFetch = (url) => {
+/* Step-4 */
+export const useFetch = (url) => {
   const [state, setState] = useState({ data: null, loading: true })
-  const [error, setError] = useState(null)
 
   useEffect(() => {
-    setState({ data: null, loading: true })
+    setState({ data: state.data, loading: true })
     fetch(url)
-      .then(response => {
-        console.log('response: ' + JSON.stringify(response.data))
+      .then((x) => x.text())
+      .then((y) => {
+        console.log(y)
+        setState({ data: y, loading: false })
       })
-      .catch(e => {
-        setState({ data: null, loading: false })
-        setError(e.message)
-      })
-  }, [url])
+  }, [url, setState])
 
-  return { state, error }
+  return state
 }
-
-export default useFetch
