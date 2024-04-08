@@ -13,7 +13,7 @@ import ErrorHandler from "./ErrorHandler"
 
 class App extends React.Component {
   render() {
-    return (<>
+    return (
       <Router>
         <Navbar />
         <Routes>
@@ -30,7 +30,7 @@ class App extends React.Component {
           <Route path="*" element={<Page404 />} />
         </Routes>
       </Router>
-    </>)
+    )
   }
 }
 
