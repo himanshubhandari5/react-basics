@@ -17,6 +17,8 @@ const Navbar = () => {
       <Link to="/use-reducer"> UseReducer</Link>
       |
       <Link to="/use-layout-effect"> UseReducer</Link>
+      |
+      <Link to="/tmp"> Tmp</Link>
     </nav>
   )
 }

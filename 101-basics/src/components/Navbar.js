@@ -11,7 +11,7 @@ class Navbar extends Component {
 
   render() {
     return (
-      <>
+      <nav>
         <Link to="/">Home</Link>-|-
         <Link to="/state-and-props">State & Props</Link>-|-
         <Link to="/router-demo">Router Demo</Link>-|-
@@ -21,7 +21,7 @@ class Navbar extends Component {
         <Link to="/react-form">React Form</Link>-|-
         <Link to={`/${Math.random()}`}>404</Link>-|-
         <Link to={`/delete`}>DELETE</Link>
-      </>
+      </nav>
     )
   }
 }

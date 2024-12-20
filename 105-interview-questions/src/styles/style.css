@@ -1,0 +1,27 @@
+.btn-red {
+  color: white;
+  background-color: red;
+}
+ul,
+p {
+  color: green;
+}
+
+td {
+  border: 1px solid black;
+}
+
+.selected-td {
+  background-color: red;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.active {
+  background-color: red;
+}

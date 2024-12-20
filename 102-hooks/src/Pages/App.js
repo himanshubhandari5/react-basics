@@ -9,6 +9,7 @@ import UseMemoHook from "./UseMemoHook"
 import UseRefHook from "./UseRefHook"
 import UseReducerHook from "./UseReducerHook"
 import UseLayoutEffectHook from "./UseLayoutEffectHook"
+import TmpUseCallbackHook from "./TmpUseCallback"
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/use-ref" element={<UseRefHook />} />
         <Route path="/use-reducer" element={<UseReducerHook />} />
         <Route path="/use-layout-effect" element={<UseLayoutEffectHook />} />
+        <Route path="/tmp" element={<TmpUseCallbackHook />} />
       </Routes>
     </Router>
   )

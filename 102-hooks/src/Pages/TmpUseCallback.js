@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react"
 
-const UseCallbackHook = () => {
+const TmpUseCallbackHook = () => {
   const [userInput, setUserInput] = useState('')
   const [result, setResult] = useState(0)
   const [num1] = useState(4)
@@ -25,4 +25,4 @@ const UseCallbackHook = () => {
   )
 }
 
-export default UseCallbackHook
+export default TmpUseCallbackHook
