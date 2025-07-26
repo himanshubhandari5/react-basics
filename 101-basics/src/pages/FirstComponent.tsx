@@ -1,12 +1,13 @@
-import React, { Component } from 'react'
+import { Component } from 'react';
 
 class FirstComponent extends Component {
-
   render() {
     return (
       <>
-        <h1>This is a basic React Component!</h1>
-        <p>The working of Class based components is showed in this mini project.</p>
+        <h1>This is a basic React Component, using react-router-dom v-6!</h1>
+        <p>
+          The working of Class based components is showed in this mini project.
+        </p>
         <p>Please click on Top Navbar, to understand Respective Topics!!</p>
         <hr />
         <h4>Open Issues</h4>
@@ -15,8 +16,8 @@ class FirstComponent extends Component {
         </ul>
         <hr />
       </>
-    )
+    );
   }
 }
 
-export default FirstComponent
+export default FirstComponent;
